@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2A6B30">
+<title>Cropstack: Page not found</title>
+<meta name="description" content="This page does not exist.">
+<style>
+:root{--bg:#F7F1E3;--panel:#FFFFFF;--card:#F4EEDF;--text:#26232B;--muted:#5B5663;--green:#2A6B30;--deep:#1E4F24;--badge:#E6F0E1;--line:rgba(42,107,48,.18)}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:var(--green);text-decoration:underline;text-underline-offset:2px}
+.hero{background:linear-gradient(160deg,var(--green),var(--deep));padding:48px 16px 40px;color:#FFFFFF}
+.wrap{max-width:760px;margin:0 auto;padding:0 4px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:.02em}
+.brand svg{width:28px;height:28px}
+.hero h1{margin:18px 0 6px;font-size:28px;font-weight:800}
+.hero p{margin:0}
+main{max-width:760px;margin:-22px auto 60px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px 20px 8px}
+@media (min-width:600px){main{padding:28px 28px 8px}}
+.toggle{display:flex;gap:8px;margin:0 0 18px}
+.toggle button{border:1px solid var(--line);background:transparent;color:var(--text);padding:6px 14px;border-radius:999px;font-size:14px;cursor:pointer}
+.toggle button.active{background:var(--green);color:#FFFFFF;border-color:var(--green);font-weight:700}
+h2{font-size:19px;margin:24px 0 8px;color:var(--green)}
+.muted{color:var(--muted);font-size:14px}
+.badge{display:inline-block;background:var(--badge);color:var(--deep);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px;margin:8px 0 20px}
+@media (min-width:600px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border-radius:14px;padding:14px 16px}
+.card h3{margin:0 0 4px;font-size:16px;color:var(--green)}
+.card p{margin:0;color:var(--muted);font-size:15px}
+footer{max-width:760px;margin:0 auto 50px;padding:0 16px;color:var(--muted);font-size:13px;text-align:center}
+hr{border:none;border-top:1px solid var(--line);margin:28px 0}
+.lang[hidden]{display:none}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 11h8v3H8zM7.5 15h8v3h-8zM8.5 19h8v3h-8zM4 9.2c0-.7 3.6-1.2 8-1.2s8 .5 8 1.2S16.4 10.4 12 10.4 4 9.9 4 9.2ZM9.5 8c0-2 1.1-3 2.5-3s2.5 1 2.5 3Z" fill="currentColor"/></svg> Cropstack</div>
+    <h1>Page not found</h1>
+    <p>Nothing here.</p>
+  </div>
+</header>
+<main>
+  <div class="toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+    <button id="btn-pt" onclick="setLang('pt')">Portugu&ecirc;s</button>
+  </div>
+  <section class="lang" id="lang-en">
+<p>This page does not exist. The <a href="/cropstack/">Cropstack home page</a> has the links to everything else.</p>
+  </section>
+  <section class="lang" id="lang-pt" hidden>
+<p>Esta p&aacute;gina n&atilde;o existe. A <a href="/cropstack/">p&aacute;gina inicial do Cropstack</a> tem os links para todo o resto.</p>
+  </section>
+</main>
+<footer>&copy; 2026 Cropstack &middot; <a href="/cropstack/">Home</a> &middot; <a href="/cropstack/privacy/">Privacy</a> &middot; <a href="/cropstack/support/">Support</a></footer>
+<script>
+function setLang(l){
+  document.getElementById('lang-en').hidden=(l!=='en');
+  document.getElementById('lang-pt').hidden=(l!=='pt');
+  document.getElementById('btn-en').classList.toggle('active',l==='en');
+  document.getElementById('btn-pt').classList.toggle('active',l==='pt');
+  document.documentElement.lang=l==='pt'?'pt-BR':'en';
+}
+if((navigator.language||'').toLowerCase().startsWith('pt'))setLang('pt');
+</script>
+</body>
+</html>
