@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2A6B30">
+<title>Cropstack</title>
+<meta name="description" content="Cropstack: a 3D farm you run with one thumb, for iPhone.">
+<style>
+:root{--bg:#F7F1E3;--panel:#FFFFFF;--card:#F4EEDF;--text:#26232B;--muted:#5B5663;--green:#2A6B30;--deep:#1E4F24;--badge:#E6F0E1;--line:rgba(42,107,48,.18)}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:var(--green);text-decoration:underline;text-underline-offset:2px}
+.hero{background:linear-gradient(160deg,var(--green),var(--deep));padding:48px 16px 40px;color:#FFFFFF}
+.wrap{max-width:760px;margin:0 auto;padding:0 4px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:.02em}
+.brand svg{width:28px;height:28px}
+.hero h1{margin:18px 0 6px;font-size:28px;font-weight:800}
+.hero p{margin:0}
+main{max-width:760px;margin:-22px auto 60px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px 20px 8px}
+@media (min-width:600px){main{padding:28px 28px 8px}}
+.toggle{display:flex;gap:8px;margin:0 0 18px}
+.toggle button{border:1px solid var(--line);background:transparent;color:var(--text);padding:6px 14px;border-radius:999px;font-size:14px;cursor:pointer}
+.toggle button.active{background:var(--green);color:#FFFFFF;border-color:var(--green);font-weight:700}
+h2{font-size:19px;margin:24px 0 8px;color:var(--green)}
+.muted{color:var(--muted);font-size:14px}
+.badge{display:inline-block;background:var(--badge);color:var(--deep);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px;margin:8px 0 20px}
+@media (min-width:600px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border-radius:14px;padding:14px 16px}
+.card h3{margin:0 0 4px;font-size:16px;color:var(--green)}
+.card p{margin:0;color:var(--muted);font-size:15px}
+footer{max-width:760px;margin:0 auto 50px;padding:0 16px;color:var(--muted);font-size:13px;text-align:center}
+hr{border:none;border-top:1px solid var(--line);margin:28px 0}
+.lang[hidden]{display:none}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 11h8v3H8zM7.5 15h8v3h-8zM8.5 19h8v3h-8zM4 9.2c0-.7 3.6-1.2 8-1.2s8 .5 8 1.2S16.4 10.4 12 10.4 4 9.9 4 9.2ZM9.5 8c0-2 1.1-3 2.5-3s2.5 1 2.5 3Z" fill="currentColor"/></svg> Cropstack</div>
+    <h1>Carry, sell, grow the farm.</h1>
+    <p>A 3D farm you run with one thumb.</p>
+  </div>
+</header>
+<main>
+  <div class="toggle">
+    <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+    <button id="btn-pt" onclick="setLang('pt')">Portugu&ecirc;s</button>
+  </div>
+  <section class="lang" id="lang-en">
+<span class="badge">Coming soon to the App Store for iPhone</span>
+<p>Cropstack is a 3D farm you run with one thumb. Walk the farmer through the fields, carry ever taller stacks of eggs, milk, bread and more to the road, serve the cars, trucks and villagers that stop by, and pay the coins into the floor to grow the farm into a village.</p>
+<div class="grid"><div class="card"><h3>One thumb</h3><p>Put your thumb anywhere and walk. Crops, animals and machines load her stack as she passes, and customers take from it at the counters.</p></div><div class="card"><h3>Six areas</h3><p>Eggs, the dairy, the bakery, the orchard, the apiary and the wool, each opened by a gate, each with its own chain and its own customers.</p></div><div class="card"><h3>Grow the farm</h3><p>Pay into the tiles on the ground: a cashier, helpers, bigger baskets, new machines, trucks that buy by the pallet.</p></div><div class="card"><h3>Second goods</h3><p>Cookies, jam, candles and scarves at their own stands, from what each area already makes.</p></div><div class="card"><h3>Helpers and carriers</h3><p>Hire hands who harvest, sell and walk the crates to the road while you work elsewhere.</p></div><div class="card"><h3>Your farm, on your iPhone</h3><p>No account; your farm is saved on your device, and Game Center achievements are there if you want them.</p></div></div>
+  </section>
+  <section class="lang" id="lang-pt" hidden>
+<span class="badge">Em breve na App Store para iPhone</span>
+<p>Cropstack &eacute; uma fazenda em 3D que voc&ecirc; toca com um polegar. Leve a fazendeira pelos campos, carregue pilhas cada vez mais altas de ovos, leite, p&atilde;o e mais at&eacute; a estrada, atenda os carros, caminh&otilde;es e moradores que param e pague as moedas no ch&atilde;o para a fazenda virar uma vila.</p>
+<div class="grid"><div class="card"><h3>Um polegar</h3><p>Ponha o polegar em qualquer lugar e ande. Colheitas, animais e m&aacute;quinas enchem a pilha dela no caminho, e os clientes pegam dela nos balc&otilde;es.</p></div><div class="card"><h3>Seis &aacute;reas</h3><p>Ovos, latic&iacute;nios, padaria, pomar, api&aacute;rio e l&atilde;, cada uma aberta por uma porteira, com a sua cadeia e os seus clientes.</p></div><div class="card"><h3>Fa&ccedil;a a fazenda crescer</h3><p>Pague nos quadrados do ch&atilde;o: caixa, ajudantes, cestos maiores, m&aacute;quinas novas, caminh&otilde;es que compram por pallet.</p></div><div class="card"><h3>Segundos produtos</h3><p>Biscoitos, geleia, velas e cachec&oacute;is em barracas pr&oacute;prias, feitos com o que cada &aacute;rea j&aacute; produz.</p></div><div class="card"><h3>Ajudantes e carregadores</h3><p>Contrate quem colhe, vende e leva os engradados at&eacute; a estrada enquanto voc&ecirc; trabalha em outro canto.</p></div><div class="card"><h3>A sua fazenda, no seu iPhone</h3><p>Sem conta; a fazenda fica salva no seu aparelho, e as conquistas do Game Center est&atilde;o l&aacute; se voc&ecirc; quiser.</p></div></div>
+  </section>
+</main>
+<footer>&copy; 2026 Cropstack &middot; <a href="privacy/">Privacy</a> &middot; <a href="support/">Support</a> &middot; <a href="terms/">Terms</a></footer>
+<script>
+function setLang(l){
+  document.getElementById('lang-en').hidden=(l!=='en');
+  document.getElementById('lang-pt').hidden=(l!=='pt');
+  document.getElementById('btn-en').classList.toggle('active',l==='en');
+  document.getElementById('btn-pt').classList.toggle('active',l==='pt');
+  document.documentElement.lang=l==='pt'?'pt-BR':'en';
+}
+if((navigator.language||'').toLowerCase().startsWith('pt'))setLang('pt');
+</script>
+</body>
+</html>
